@@ -3,6 +3,13 @@ const app = express();
 const port = 8000;
 const expressLayouts = require("express-ejs-layouts");
 const db = require("./config/mongoose");
+const cookieParser = require("cookie-parser");
+
+// reading through the post request
+app.use(express.urlencoded());
+
+//setting up cookie-parser
+app.use(cookieParser);
 
 // Using assets to apply css js images
 app.use(express.static("./assets"));
