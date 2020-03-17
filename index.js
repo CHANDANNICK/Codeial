@@ -9,7 +9,7 @@ const cookieParser = require("cookie-parser");
 app.use(express.urlencoded());
 
 //setting up cookie-parser
-app.use(cookieParser);
+app.use(cookieParser());
 
 // Using assets to apply css js images
 app.use(express.static("./assets"));
